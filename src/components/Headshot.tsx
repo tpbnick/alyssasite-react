@@ -1,4 +1,5 @@
 import AlyssaPic from "../assets/alyssa.webp";
+import Resume from "../assets/aplatt_resume.pdf";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
@@ -6,10 +7,14 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Headshot = () => {
+	const handleSeeResume = () => {
+		window.open(Resume);
+	};
+
 	return (
 		<div className="bg-gray-100 rounded-b-xl lg:px-40 pb-10">
 			<div className="flex flex-col lg:flex-row items-center lg:py-20 py-10 px-10 space-y-8">
-				<div className="w-full lg:w-1/2 flex justify-center ">
+				<div className="w-full lg:w-1/2 flex justify-center">
 					<img
 						src={AlyssaPic}
 						className="max-w-lg min-w-md w-full h-auto rounded-lg shadow-lyssShadow"
@@ -23,6 +28,14 @@ const Headshot = () => {
 						desire to excel and continuously improve in my work. Learn more about me
 						below!
 					</p>
+					<div className="pb-5 max-w-xs">
+						<button
+							className="btn bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish w-full"
+							onClick={handleSeeResume}
+						>
+							See Resume
+						</button>
+					</div>
 					<div className="space-x-8">
 						<a
 							href="https://www.youtube.com/@lyssplatt/videos"
