@@ -99,7 +99,12 @@ const MainDisplay = () => {
 							>
 								Contact
 							</button>
-							<button className="btn bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish w-full">
+							<button
+								className="btn bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish w-full"
+								onClick={() =>
+									window.open("https://www.linkedin.com/in/alyssa-platt/", "_blank")
+								}
+							>
 								LinkedIn
 							</button>
 						</div>
@@ -124,7 +129,12 @@ const MainDisplay = () => {
 						>
 							Contact
 						</button>
-						<button className="btn bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish">
+						<button
+							className="btn bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish w-full"
+							onClick={() =>
+								window.open("https://www.linkedin.com/in/alyssa-platt/", "_blank")
+							}
+						>
 							LinkedIn
 						</button>
 					</div>
