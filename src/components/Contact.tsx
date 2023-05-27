@@ -1,22 +1,8 @@
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 
 const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
-	const formOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		const formBtn = document.getElementById("form-btn");
-		const contactForm = document.getElementById(
-			"contact-form"
-		) as HTMLFormElement;
-		if (formBtn) {
-			formBtn.textContent = "Sent Successfully";
-		}
-		if (contactForm) {
-			contactForm.reset();
-		}
-	};
-
 	return (
 		<div ref={ref} className="px-10 lg:px-60 pb-40">
 			<p className="py-10 text-black font-bold text-4xl">Contact 💜</p>
@@ -32,7 +18,6 @@ const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
 				data-netlify-recaptcha="true"
 				className="flex flex-col items-center"
 				data-netlify-honeypot="bot-field"
-				onSubmit={formOnSubmit}
 			>
 				<div className="flex flex-col space-y-4 w-full">
 					<label className="text-black block text-xl">
