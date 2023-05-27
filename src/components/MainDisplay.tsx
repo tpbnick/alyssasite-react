@@ -130,7 +130,7 @@ const MainDisplay = () => {
 							Contact
 						</button>
 						<button
-							className="btn bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish w-full"
+							className="btn bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish"
 							onClick={() =>
 								window.open("https://www.linkedin.com/in/alyssa-platt/", "_blank")
 							}
