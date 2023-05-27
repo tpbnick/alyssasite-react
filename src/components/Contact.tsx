@@ -1,8 +1,22 @@
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 
 const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
+	const formOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const formBtn = document.getElementById("form-btn");
+		const contactForm = document.getElementById(
+			"contact-form"
+		) as HTMLFormElement;
+		if (formBtn) {
+			formBtn.textContent = "Sent Successfully";
+		}
+		if (contactForm) {
+			contactForm.reset();
+		}
+	};
+
 	return (
 		<div ref={ref} className="px-10 lg:px-60 pb-40">
 			<p className="py-10 text-black font-bold text-4xl">Contact 💜</p>
@@ -14,8 +28,11 @@ const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
 				name="contact"
 				method="POST"
 				data-netlify="true"
+				id="contact-form"
 				data-netlify-recaptcha="true"
 				className="flex flex-col items-center"
+				data-netlify-honeypot="bot-field"
+				onSubmit={formOnSubmit}
 			>
 				<div className="flex flex-col space-y-4 w-full">
 					<label className="text-black block text-xl">
@@ -45,11 +62,14 @@ const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
 						></textarea>
 					</label>
 				</div>
+				{/* Required input for netlify forms */}
+				<input type="hidden" name="form-name" value="contact" />
 				<div className="py-2" data-netlify-recaptcha="true"></div>
 				<div className="w-full text-center">
 					<button
 						className="btn text-xl bg-pinkish drop-shadow-md border-none text-purple-950 font-normal hover:bg-orangeish py-2 mt-4 flex justify-center items-center mx-auto max-w-xs w-full"
 						type="submit"
+						id="form-btn"
 					>
 						Send <FontAwesomeIcon className="pl-2" icon={faPaperPlane} />
 					</button>
