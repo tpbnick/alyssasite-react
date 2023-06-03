@@ -30,11 +30,6 @@ import Soccer from "../assets/portfolio/soccer.webp";
 import Tower from "../assets/portfolio/tower1.webp";
 import Tower2 from "../assets/portfolio/tower2.webp";
 
-import ChidogVideo from "../assets/portfolio/videos/chidog-food.mp4";
-import ChidogVideo2 from "../assets/portfolio/videos/chidog-food2.mp4";
-import LabargeVideo from "../assets/portfolio/videos/labarge.mp4";
-import LabargeVideo2 from "../assets/portfolio/videos/labarge2.mp4";
-
 const Portfolio = forwardRef<HTMLDivElement>((_props, ref) => {
 	const [index, setIndex] = useState(-1);
 	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800);
@@ -96,10 +91,22 @@ const Portfolio = forwardRef<HTMLDivElement>((_props, ref) => {
 	];
 
 	const carouselVideos = [
-		{ src: ChidogVideo, alt: "ChiDog Video" },
-		{ src: ChidogVideo2, alt: "ChiDog Video 2" },
-		{ src: LabargeVideo, alt: "Labarge Video" },
-		{ src: LabargeVideo2, alt: "Labarge Video 2" },
+		{
+			src: "https://cdn.nickplatt.dev/files/Misc/alyssa/Portfolio-Videos/chidog-food.mp4",
+			alt: "ChiDog Video",
+		},
+		{
+			src: "https://cdn.nickplatt.dev/files/Misc/alyssa/Portfolio-Videos/chidog-food2.mp4",
+			alt: "ChiDog Video 2",
+		},
+		{
+			src: "https://cdn.nickplatt.dev/files/Misc/alyssa/Portfolio-Videos/labarge.mp4",
+			alt: "Labarge Video",
+		},
+		{
+			src: "https://cdn.nickplatt.dev/files/Misc/alyssa/Portfolio-Videos/labarge2.mp4",
+			alt: "Labarge Video 2",
+		},
 	];
 
 	return (
