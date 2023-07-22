@@ -3,7 +3,7 @@ import DavinciPic from "../assets/skills/davinci.webp";
 import FacebookPic from "../assets/skills/fb.webp";
 import HootSuitePic from "../assets/skills/hootsuite.webp";
 import IllustratorPic from "../assets/skills/illustrator.webp";
-import IndesignPic from "../assets/skills/indesign.webp";
+import ShopifyPic from "../assets/skills/shopify.webp";
 import InstaPic from "../assets/skills/insta.webp";
 import LinkedIn from "../assets/skills/linkedin.webp";
 import MailChimpPic from "../assets/skills/mailchimp.webp";
@@ -20,7 +20,7 @@ const Skills = () => {
 		{ src: FacebookPic, alt: "Facebook" },
 		{ src: HootSuitePic, alt: "Hootsuite" },
 		{ src: IllustratorPic, alt: "Adobe Illustrator" },
-		{ src: IndesignPic, alt: "Adobe InDesign" },
+		{ src: ShopifyPic, alt: "Shopify" },
 		{ src: InstaPic, alt: "Instagram" },
 		{ src: LinkedIn, alt: "LinkedIn" },
 		{ src: MailChimpPic, alt: "MailChimp" },
