@@ -129,20 +129,24 @@ const ImageCarousel = () => {
 	return (
 		<div>
 			<div className="relative rounded-lg overflow-hidden drop-shadow-lg">
-				<div ref={emblaRef} className="overflow-hidden select-none">
-					<div className="flex">
-						{images.map((image, i) => (
-							<div key={i} className="flex-none w-full">
-								<img
-									src={image.src}
-									alt={image.alt}
-									draggable="false"
-									className="w-full h-auto block pointer-events-none"
-								/>
-							</div>
-						))}
+				<PhotoProvider>
+					<div ref={emblaRef} className="overflow-hidden select-none">
+						<div className="flex">
+							{images.map((image, i) => (
+								<div key={i} className="flex-none w-full">
+									<PhotoView src={image.src} key={i}>
+										<img
+											src={image.src}
+											alt={image.alt}
+											draggable="false"
+											className="w-full h-auto block cursor-pointer"
+										/>
+									</PhotoView>
+								</div>
+							))}
+						</div>
 					</div>
-				</div>
+				</PhotoProvider>
 				<CarouselArrows onPrev={scrollPrev} onNext={scrollNext} />
 			</div>
 			<div className="text-center mt-3 text-sm text-gray-500">
