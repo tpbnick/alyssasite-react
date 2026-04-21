@@ -32,7 +32,7 @@ const Skills = () => {
 	];
 
 	return (
-		<div className="px-10 lg:px-60 pb-10">
+		<div className="px-4 sm:px-6 lg:px-16 pb-10">
 			<p className="py-10 text-black font-bold text-4xl">Skills 🛠️</p>
 			<p className="text-black text-xl lg:text-3xl pb-10">
 				I am proficient in the following technologies:
