@@ -41,11 +41,11 @@ const Skills = () => {
 				{images.map((image, i) => (
 					<div
 						key={i}
-						className="relative w-32 h-32 overflow-hidden rounded-full bg-white drop-shadow-lg hover:scale-110 transition-transform duration-500 ease-in-out"
+						className="relative w-32 h-32 rounded-full drop-shadow-lg hover:scale-110 transition-transform duration-500 ease-in-out flex items-center justify-center overflow-hidden"
 					>
 						<img
 							src={image.src}
-							className="absolute top-0 bottom-0 left-0 right-0 w-auto h-32 m-auto object-contain transition duration-500 ease-in-out transform hover:scale-110"
+							className="w-full h-full object-cover"
 							alt={image.alt}
 						/>
 						<div className="absolute inset-0 bg-purple-500 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-500">
